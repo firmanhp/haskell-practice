@@ -518,3 +518,12 @@ main3 = runRobot spiral s0 g3
 main3book = runRobotBook treasureHunt s0 g3
 main4 = runRobot spiral s0 g4
 main4book = runRobotBook treasureHunt s0 g4
+
+-- Menambahkan informasi Energy pada RobotState:
+-- Kita bisa menambahkan informasi baru pada definisi RobotState (Energy),
+-- Kemudian, dapat digunakan updateState untuk mengubah energy dari robot.
+-- Untuk setiap gerakan, dapat digunakan cond1 untuk mengecek apakah energi dari robot cukup.
+-- Fungsi tambahan yang dapat digunakan:
+
+-- deductEnergy :: Int -> Robot ()
+-- deductEnergy x = updateState (\s s {energy = (energy s) - x})
