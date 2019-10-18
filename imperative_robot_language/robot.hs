@@ -534,3 +534,8 @@ main4book = runRobotBook treasureHunt s0 g4
 -- mapM_ adalah versi lain dari mapM yang mengabaikan hasilnya (biasanya hanya fokus kepada side effectnya saja)
 -- Sedangkan mapM sendiri adalah versi lain dalam map yang melakukan pemetaan pada nilai yang dikandung oleh
 -- objek bertipe monad.
+
+-- fungsi forLoop dapat dilakukan sbb
+-- forLoop :: (Foldable t, Monad m) => t a -> (a -> Robot ()) -> Robot ()
+-- forLoop [] action = return ()
+-- forLoop x:xs action = (action x) >> (forLoop xs action)
