@@ -527,3 +527,10 @@ main4book = runRobotBook treasureHunt s0 g4
 
 -- deductEnergy :: Int -> Robot ()
 -- deductEnergy x = updateState (\s s {energy = (energy s) - x})
+
+
+-- mapM_ mempunyai tipe sbb:
+-- mapM_ :: (Foldable t, Monad m) => (a -> m b) -> t a -> m ()
+-- mapM_ adalah versi lain dari mapM yang mengabaikan hasilnya (biasanya hanya fokus kepada side effectnya saja)
+-- Sedangkan mapM sendiri adalah versi lain dalam map yang melakukan pemetaan pada nilai yang dikandung oleh
+-- objek bertipe monad.
