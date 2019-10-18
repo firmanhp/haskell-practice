@@ -33,6 +33,10 @@ fold (fconst,fadd,fsub,fmul,fdiv,fvar,flet) (expr1 :/ expr2) =  let fs = (fconst
 fold (fconst,fadd,fsub,fmul,fdiv,fvar,flet) (V v) = fvar v
 fold (fconst,fadd,fsub,fmul,fdiv,fvar,flet) (Let var expr1 expr2) = flet var expr1 expr2
 
+
+-- Menambahkan fungsi fold membuka banyak kemungkinan dalam memanipulasi pohon ekspresi.
+-- Salah satunya, fungsi evaluasi di bawah memanfaatkan fungsi fold yang telah dibuat,
+-- yang mana fungsi setiap operasinya disesuaikan.
 evaluateFold = fold (fconst,fadd,fsub,fmul,fdiv,fvar,flet)
                 where
                     fconst = id
