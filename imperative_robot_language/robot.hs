@@ -536,6 +536,6 @@ main4book = runRobotBook treasureHunt s0 g4
 -- objek bertipe monad.
 
 -- fungsi forLoop dapat dilakukan sbb
--- forLoop :: (Foldable t, Monad m) => t a -> (a -> Robot ()) -> Robot ()
+-- forLoop :: Monad m => [a] -> (a -> Robot ()) -> Robot ()
 -- forLoop [] action = return ()
--- forLoop x:xs action = (action x) >> (forLoop xs action)
+-- forLoop (x:xs) action = (action x) >> (forLoop xs action)
