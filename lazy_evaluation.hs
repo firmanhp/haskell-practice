@@ -24,3 +24,5 @@ prime = prime' [2..]
 
 -- 6. triple pythagoras
 pythaTriple = [(x, y, z) | z <- [1..], y <- [1..z], x <- [1..y], (x*x) + (y*y) == (z*z)]
+
+fib = 1:1:zipWith (+) fib (tail fib)
